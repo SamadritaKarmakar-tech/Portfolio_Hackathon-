@@ -1,0 +1,241 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  /* background: linear-gradient(to right, #1f1c2c, #928dab); */
+  background: #a78bfa;
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Glass container */
+.glass {
+  background: rgba(255, 255, 255, 0.08); /* translucent */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+
+  padding: 20px;
+}
+/* Hero Section */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color:  #a78bfa; 
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: #ecbdb9;
+  color: #252121;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e3cecd;
+}
+
+/* Navigation */
+header {
+  background: rgba(0,0,0,0.7);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+    opacity: 1;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+  color:#f4eeed;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color:#ecbdb9;
+}
+/* Skills */
+#skills{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.skill-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 6px 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.skill-card:hover{
+    box-shadow: 2px 2px 2px #878383;
+}
+
+/* Sections */
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 250px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.2);
+}
+
+/* Contact Form */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  background: #d9bebc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #dea7a3;
+}
+
+/* Footer */
+footer {
+  background: rgba(0,0,0,0.7);
+  text-align: center;
+  padding: 1rem;
+}
+/* Navigation */
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: #a78bfa;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end; /* Push items to the right */
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #a78bfa; /* pastel lavender */
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #a78bfa;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Slide-in animation for navbar */
+header {
+  animation: slideDown 0.8s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
